@@ -326,7 +326,47 @@ li{
         font-weight: 600;
         text-decoration: none;
     }
-@media (max-width: 600px) {
+
+ /* =========================================================
+   TABLE RESPONSIVENESS – Mobile Scroll Handling
+   ========================================================= */
+
+/* Wrap all tables automatically for small screens */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth momentum scroll */
+}
+
+/* Optional: visually indicate horizontal scroll */
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #C9B694;
+  border-radius: 3px;
+}
+.table-responsive::-webkit-scrollbar-track {
+  background-color: #EEEEEE;
+}
+
+/* Ensure table layout integrity */
+.table-responsive table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* forces horizontal scroll when content overflows */
+}
+
+/* Slightly tighten padding on mobile */
+@media (max-width: 768px) {
+  table th,
+  table td {
+    padding: 0.5em;
+    font-size: 0.85rem;
+  }
+}
+   
+@media (max-width: 768px) {
     .brand-logo {
         width: 100px;
         height: 100px;
@@ -346,7 +386,6 @@ li{
         margin-top: 2px;
     }
 }
-
     </style>
 </head>
 
@@ -478,7 +517,7 @@ li{
         <section id="business-model">
             <h2 class="section-title">6. Business Model</h2>
             <div class="card-like">
-                <table>
+                <table class="table-responsive">
                     <thead>
                         <tr>
                             <th>Revenue Stream</th>
@@ -555,7 +594,7 @@ li{
                     <li>Ethical brand voice. Clear promises, honest limits, and visible listening loops.</li>
                 </ul>
                 <h3 style="font-size:16px; font-weight:700; margin:10px 0 6px 0;">Year 1 Milestones</h3>
-                <table>
+                <table class="table-responsive">
                     <thead>
                         <tr>
                             <th>Quarter</th>
@@ -601,7 +640,7 @@ li{
             <h2 class="section-title">10. Governance and Ownership</h2>
             <div class="card-like">
                 <p>Revela Group operates as a for-profit public benefit corporation with a non-profit arm dedicated to research, public standards, and access programs. The Group Charter encodes duties to people and outcomes. Executive compensation ties to mission metrics as well as financial results. An independent Ethics Council has authority to audit, publish findings, and recommend corrective action.</p>
-                <table>
+                <table class="table-responsive">
                     <thead>
                         <tr>
                             <th>Body</th>
@@ -653,7 +692,7 @@ li{
                     <li>Health, Education, Finance, Governance, Media.</li>
                 </ul>
                 <h3 style="font-size:16px; font-weight:700; margin:10px 0 6px 0;">Year 1 Hiring Plan (Core)</h3>
-                <table>
+                <table class="table-responsive">
                     <thead>
                         <tr>
                             <th>Role</th>
@@ -713,7 +752,7 @@ li{
             <h2 class="section-title">12. Financial Model and Projections (Five Years)</h2>
             <div class="card-like">
                 <p>Assumptions reflect UK launch with prudent expansion, transparent pricing, and disciplined hiring. Health leads revenue from Year 1. Education, Software Licensing, and Employer Programs scale through Years 2 to 5. Finance, Governance, and Media contribute from Year 3 onward.</p>
-                <table>
+                <table class="table-responsive">
                     <thead>
                         <tr>
                             <th>£m</th>
@@ -847,7 +886,7 @@ li{
             <h2 class="section-title">13. Funding Requirements and Use of Proceeds</h2>
             <div class="card-like">
                 <p>We seek an initial seed round of £8.5m to execute Phase One. This funds clinical launch, platform build, early GTM, and the non-profit foundation.</p>
-                <table>
+                <table class="table-responsive">
                     <thead>
                         <tr>
                             <th>Category</th>
@@ -895,7 +934,7 @@ li{
         <section id="impact">
             <h2 class="section-title">14. Impact Metrics and Legacy</h2>
             <div class="card-like">
-                <table>
+                <table class="table-responsive">
                     <thead>
                         <tr>
                             <th>Metric</th>
