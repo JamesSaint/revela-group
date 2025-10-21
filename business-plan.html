@@ -126,12 +126,60 @@
       .pillar-rail { border-right: 0; border-bottom: 1px solid var(--gold); padding: 12px; }
       .pillar-rail img { max-width: var(--pillar-logo-max-mobile); }
     }
+
+    /* === MOBILE ROBUSTNESS HOTFIXES === */
+
+/* 1) Kill any rogue sideways scroll without masking real issues */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* 2) Make every image responsive by default */
+img { max-width: 100%; height: auto; }
+
+/* 3) Tighten page wrap on small screens (keeps your 900px on desktop) */
+@media (max-width: 576px) {
+  .page-wrap { max-width: 100%; padding: 0 12px; margin: 0 auto; }
+  .brand-row { flex-wrap: wrap; } /* prevent the brand line from forcing width */
+  .brand-logo { width: 96px; height: 96px; }
+  .brand-name { font-size: 26px; }
+  .tagline { font-size: 14px; }
+}
+
+/* 4) Pillar left-rail grid: guarantee proper stacking on phones */
+@media (max-width: 768px) {
+  .pillar-row { grid-template-columns: 1fr !important; }
+  .pillar-rail { border-right: 0; border-bottom: 1px solid var(--gold); }
+}
+
+/* 5) Tables: rely on Bootstrap’s .table-responsive without leaking width */
+.table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-responsive table { min-width: 560px; } /* keeps columns readable but clips inside the wrapper */
+
+/* In very narrow viewports, allow break and reduce min-width to avoid full-page overflow */
+@media (max-width: 420px) {
+  .table-responsive table { min-width: 480px; }
+}
+
+/* 6) Prevent long strings from blowing out layout */
+table th, table td, .card-like, section, p, li {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* 7) Breadcrumbs: allow wrapping instead of stretching line */
+nav.breadcrumbs { white-space: normal; }
+
+/* 8) Utility: ensure any explicit widths never exceed viewport */
+*[style*="width:"] { max-width: 100%; }
+
+/* 9) Bootstrap alignment harmony: remove default margin collapse surprises on mobile */
+section { overflow: hidden; }
+
   </style>
 
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://jamessaint.github.io https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' https://jamessaint.github.io data:; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' https://cdn.jsdelivr.net;">
 </head>
 <body>
-  <div class="page-wrap">
+  <div class="page-wrap container-fluid px-2 px-md-3">
 
     <!-- Header -->
     <header class="site-header" role="banner" aria-label="Site header">
@@ -324,7 +372,7 @@
         <div class="card-like">
           <strong>Cadence</strong>
           <div class="table-responsive">
-            <table>
+            <table class="table">
               <thead><tr><th>Quarter</th><th>Milestones</th></tr></thead>
               <tbody>
                 <tr><td>Q1</td><td>Clinical governance board live. First clinics running. Consent vault v1. First cohorts.</td></tr>
@@ -363,7 +411,7 @@
     <section id="governance" aria-labelledby="governance-title">
       <h2 id="governance-title" class="section-title">Governance and Ownership</h2>
       <div class="table-responsive">
-        <table>
+        <table class="table">
           <thead><tr><th>Body</th><th>Scope</th><th>Powers</th></tr></thead>
           <tbody>
             <tr>
@@ -401,7 +449,7 @@
       </div>
 
       <div class="table-responsive">
-        <table>
+        <table class="table">
           <thead><tr><th>Role</th><th>Responsibilities</th><th>Deliverables</th><th>KPIs</th><th>Requirements</th></tr></thead>
           <tbody>
             <tr>
@@ -460,7 +508,7 @@
       <div class="card-like">
         <strong>Year 1 Hiring Plan</strong>
         <div class="table-responsive">
-          <table>
+          <table class="table">
             <thead><tr><th>Function</th><th>Headcount</th><th>Notes</th></tr></thead>
             <tbody>
               <tr><td>Clinical staff</td><td>18</td><td>Neurology, respiratory, pain, rehab. Mix of consultants, therapists, nurses.</td></tr>
@@ -494,7 +542,7 @@
         <p>Assumptions reflect a UK launch with disciplined hiring, transparent pricing, and growing employer and insurer channels. Health leads revenue from Year 1. Education, software licensing, and employer programs scale through Years 2 to 5. Finance, Governance, and Media contribute from Year 3.</p>
       </div>
       <div class="table-responsive">
-        <table>
+        <table class="table">
           <thead><tr><th>£m</th><th>Y1</th><th>Y2</th><th>Y3</th><th>Y4</th><th>Y5</th></tr></thead>
           <tbody>
             <tr><td>Members (avg)</td><td>8k</td><td>24k</td><td>70k</td><td>150k</td><td>280k</td></tr>
@@ -520,7 +568,7 @@
     <section id="funding" aria-labelledby="funding-title">
       <h2 id="funding-title" class="section-title">Funding and Use of Proceeds</h2>
       <div class="table-responsive">
-        <table>
+        <table class="table">
           <thead><tr><th>Category</th><th>Allocation</th><th>Detail</th></tr></thead>
           <tbody>
             <tr><td>Clinical and operations</td><td>£2.6m</td><td>Clinician salaries, clinics, specialist contracts, equipment, QA.</td></tr>
@@ -538,7 +586,7 @@
     <section id="impact" aria-labelledby="impact-title">
       <h2 id="impact-title" class="section-title">Impact Metrics and Legacy</h2>
       <div class="table-responsive">
-        <table>
+        <table class="table">
           <thead><tr><th>Metric</th><th>Definition</th><th>Year 1</th><th>Year 3</th><th>Year 5</th></tr></thead>
           <tbody>
             <tr><td>Outcome improvement</td><td>Condition specific PROMs and clinical measures.</td><td>10%+</td><td>20%+</td><td>30%+</td></tr>
