@@ -73,7 +73,7 @@
     section { margin-top: 22px; }
     h1 { font-size: 18px; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px; }
     h2.section-title { font-size: 18px; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px; }
-
+h3 { font-size: 18px; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px; }
     .card-like { border-left: 3px solid var(--gold); padding: 16px; margin-bottom: 14px; background: #FFFFFF; }
     p { line-height: 1.6; margin: 0 0 10px 0; }
 
@@ -233,6 +233,7 @@ section { overflow: hidden; }
     min-width: 480px;
   }
 }
+@media (max-width: 576px){ .card-like { padding: 14px; } }
 
 
   </style>
@@ -285,67 +286,106 @@ section { overflow: hidden; }
     <!-- Executive Summary -->
     <section id="executive" aria-labelledby="executive-title">
       <h2 id="executive-title" class="section-title">Executive Summary</h2>
-      <div class="grid-3">
-        <div class="card-like"><strong>Mandate</strong><p>Replace volume incentives with outcome contracts. Price services on verified value. Give people readable rights and real redress.</p></div>
-        <div class="card-like"><strong>Model</strong><p>Membership, clinical services, employer programs, software licensing, and creator media. No hidden spread. No data capture without purpose.</p></div>
-        <div class="card-like"><strong>Seed Ask</strong><p>£8.5m to stand up Revela Health, publish outcomes, and prepare scale into Education, Finance, Governance, and Media.</p></div>
-      </div>
-      <div class="card-like">
-        <p>Phase One is Health. We start where the old paradigm hurts people most. Preventative care, longitudinal recovery, clear prices, and data sovereignty. Evidence in the open.</p>
-      </div>
+<!-- Keep your <section id="executive"> and <h2> exactly as-is, then paste this -->
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mt-2">
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Mandate</h3>
+      <p class="mb-0">Replace volume incentives with outcome contracts. Price services on verified value. Give people readable rights and real redress.</p>
+    </article>
+  </div>
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Model</h3>
+      <p class="mb-0">Membership, clinical services, employer programs, software licensing, and creator media. No hidden spread. No data capture without purpose.</p>
+    </article>
+  </div>
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Seed Ask</h3>
+      <p class="mb-0">£8.5m to stand up Revela Health, publish outcomes, and prepare scale into Education, Finance, Governance, and Media.</p>
+    </article>
+  </div>
+</div>
+
+<div class="card-like mt-3">
+  <p class="mb-0">Phase One is Health. We start where the old paradigm hurts people most. Preventative care, longitudinal recovery, clear prices, and data sovereignty. Evidence in the open.</p>
+</div>
+
     </section>
 
     <!-- Thesis and Mission -->
     <section id="thesis" aria-labelledby="thesis-title">
       <h2 id="thesis-title" class="section-title">Thesis and Mission</h2>
-      <div class="grid-2">
-        <div class="card-like"><strong>Thesis</strong><p>When incentives, information, and accountability align, outcomes improve. We align them with open interfaces, consent that means something, and audits that are not optional.</p></div>
-        <div class="card-like"><strong>Mission</strong><p>Design and scale ethical operating models for Health, Education, Finance, Governance, and Media. Start in the United Kingdom. Prove the standard. Replicate where it helps people most.</p></div>
-      </div>
+<div class="row row-cols-1 row-cols-md-2 g-3 mt-2">
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Thesis</h3>
+      <p class="mb-0">When incentives, information, and accountability align, outcomes improve. We align them with open interfaces, consent that means something, and audits that are not optional.</p>
+    </article>
+  </div>
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Mission</h3>
+      <p class="mb-0">Design and scale ethical operating models for Health, Education, Finance, Governance, and Media. Start in the United Kingdom. Prove the standard. Replicate where it helps people most.</p>
+    </article>
+  </div>
+</div>
+
     </section>
 
     <!-- Problem -->
     <section id="problem" aria-labelledby="problem-title">
       <h2 id="problem-title" class="section-title">The Problem</h2>
-      <div class="grid-2">
-        <div class="card-like">
-          <ul>
-            <li>Misaligned incentives. Throughput is paid. Results are optional.</li>
-            <li>Opacity. Contracts and data are either unreadable or gated.</li>
-            <li>Compliance over care. The human is an afterthought.</li>
-          </ul>
-        </div>
-        <div class="card-like">
-          <ul>
-            <li>Innovation stalls behind legacy rails and policy friction.</li>
-            <li>Compounding social cost across health, money, learning, civic life, and media trust.</li>
-          </ul>
-        </div>
-      </div>
+<div class="row row-cols-1 row-cols-md-2 g-3 mt-2">
+  <div class="col">
+    <article class="card-like h-100">
+      <ul class="mb-0">
+        <li>Misaligned incentives. Throughput is paid. Results are optional.</li>
+        <li>Opacity. Contracts and data are either unreadable or gated.</li>
+        <li>Compliance over care. The human is an afterthought.</li>
+      </ul>
+    </article>
+  </div>
+  <div class="col">
+    <article class="card-like h-100">
+      <ul class="mb-0">
+        <li>Innovation stalls behind legacy rails and policy friction.</li>
+        <li>Compounding social cost across health, money, learning, civic life, and media trust.</li>
+      </ul>
+    </article>
+  </div>
+</div>
+
     </section>
 
     <!-- Model -->
     <section id="model" aria-labelledby="model-title">
       <h2 id="model-title" class="section-title">Operating Model and Why It Wins</h2>
-      <div class="grid-2">
-        <div class="card-like">
-          <strong>Design Principles</strong>
-          <ul>
-            <li>Privacy by design with revocation that works.</li>
-            <li>Explainable intelligence with a human accountable for decisions.</li>
-            <li>Open interfaces so people can move their data and providers can be replaced.</li>
-            <li>Outcome pricing and readable service charters.</li>
-          </ul>
-        </div>
-        <div class="card-like">
-          <strong>Defensibility</strong>
-          <ul>
-            <li>Trust and transparency as the moat. Public dashboards and contracts in plain language.</li>
-            <li>Cross pillar reuse. One consent vault and audit trail across services reduces cost and increases speed.</li>
-            <li>Integrity brand. People have been waiting for this category.</li>
-          </ul>
-        </div>
-      </div>
+      <div class="row row-cols-1 row-cols-md-2 g-3 mt-2">
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Design Principles</h3>
+      <ul class="mb-0">
+        <li>Privacy by design with revocation that works.</li>
+        <li>Explainable intelligence with a human accountable for decisions.</li>
+        <li>Open interfaces so people can move their data and providers can be replaced.</li>
+        <li>Outcome pricing and readable service charters.</li>
+      </ul>
+    </article>
+  </div>
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Defensibility</h3>
+      <ul class="mb-0">
+        <li>Trust and transparency as the moat. Public dashboards and contracts in plain language.</li>
+        <li>Cross pillar reuse. One consent vault and audit trail across services reduces cost and increases speed.</li>
+        <li>Integrity brand. People have been waiting for this category.</li>
+      </ul>
+    </article>
+  </div>
+</div>
+
     </section>
 
     <!-- Pillars (Left Logo Rail) -->
@@ -421,51 +461,61 @@ section { overflow: hidden; }
     <!-- GTM -->
     <section id="gtm" aria-labelledby="gtm-title">
       <h2 id="gtm-title" class="section-title">Go to Market and Milestones</h2>
-      <div class="grid-2">
-        <div class="card-like">
-          <strong>Year 1 Objectives</strong>
-          <ul>
-            <li>Stand up tele clinics and specialist network in neurology, respiratory, pain.</li>
-            <li>Deploy consent vault, outcome dashboards, explainable triage.</li>
-            <li>Run three signature programs and sign ten employer pilots plus two insurers.</li>
-          </ul>
-        </div>
-        <div class="card-like">
-          <strong>Cadence</strong>
-          <div class="table-responsive">
-            <table class="table">
-              <thead><tr><th>Quarter</th><th>Milestones</th></tr></thead>
-              <tbody>
-                <tr><td>Q1</td><td>Clinical governance board live. First clinics running. Consent vault v1. First cohorts.</td></tr>
-                <tr><td>Q2</td><td>Employer pilots. Diagnostics partners integrated. Programs operational across three conditions.</td></tr>
-                <tr><td>Q3</td><td>Insurer integrations. Outcomes dashboard public. Education modules live.</td></tr>
-                <tr><td>Q4</td><td>Positive unit economics on core programs. Scope second geography.</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+<div class="row row-cols-1 row-cols-md-2 g-3 mt-2">
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Year 1 Objectives</h3>
+      <ul class="mb-0">
+        <li>Stand up tele clinics and specialist network in neurology, respiratory, pain.</li>
+        <li>Deploy consent vault, outcome dashboards, explainable triage.</li>
+        <li>Run three signature programs and sign ten employer pilots plus two insurers.</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Cadence</h3>
+      <div class="table-responsive">
+        <table>
+          <thead><tr><th>Quarter</th><th>Milestones</th></tr></thead>
+          <tbody>
+            <tr><td>Q1</td><td>Clinical governance board live. First clinics running. Consent vault v1. First cohorts.</td></tr>
+            <tr><td>Q2</td><td>Employer pilots. Diagnostics partners integrated. Programs operational across three conditions.</td></tr>
+            <tr><td>Q3</td><td>Insurer integrations. Outcomes dashboard public. Education modules live.</td></tr>
+            <tr><td>Q4</td><td>Positive unit economics on core programs. Scope second geography.</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="note">We publish a monthly changelog and a public delivery scoreboard. No hidden work. No vanity metrics.</div>
+    </article>
+  </div>
+</div>
+
     </section>
 
     <!-- Technology -->
     <section id="tech" aria-labelledby="tech-title">
       <h2 id="tech-title" class="section-title">Technology and AI</h2>
-      <div class="grid-2">
-        <div class="card-like">
-          <strong>Core Stack</strong>
-          <ul>
-            <li>Consent and data vault with fine grained purpose, time boxed access, and true revocation.</li>
-            <li>Explainable models with readable rationales and model cards.</li>
-            <li>Open APIs and cryptographic audit trails.</li>
-            <li>Security baseline with zero trust, least privilege, encryption in transit and at rest, and continuous monitoring.</li>
-          </ul>
-        </div>
-        <div class="card-like">
-          <strong>Governance Interfaces</strong>
-          <p>People, clinicians, and councils can inspect model behavior, trigger audits, and require remediation. Changes are logged and published.</p>
-        </div>
-      </div>
+    <div class="row row-cols-1 row-cols-md-2 g-3 mt-2">
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Core Stack</h3>
+      <ul class="mb-0">
+        <li>Consent and data vault with fine grained purpose, time boxed access, and true revocation.</li>
+        <li>Explainable models with readable rationales and model cards.</li>
+        <li>Open APIs and cryptographic audit trails.</li>
+        <li>Security baseline with zero trust, least privilege, encryption in transit and at rest, and continuous monitoring.</li>
+      </ul>
+    </article>
+  </div>
+  <div class="col">
+    <article class="card-like h-100">
+      <h3 class="h6 text-uppercase mb-2">Governance Interfaces</h3>
+      <p class="mb-0">People, clinicians, and councils can inspect model behavior, trigger audits, and require remediation. Changes are logged and published.</p>
+    </article>
+  </div>
+</div>
+
     </section>
 
     <!-- Governance -->
